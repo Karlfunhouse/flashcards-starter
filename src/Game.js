@@ -17,6 +17,7 @@ class Game {
     this.currentRound = round
     this.printMessage(deck)
     this.printQuestion(round)
+    round.startTimer()
   }
 
   printMessage(deck) {
