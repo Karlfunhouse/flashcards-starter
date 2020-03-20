@@ -3,7 +3,6 @@ const expect = chai.expect;
 
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
-const Turn = require('../src/Turn');
 const Round = require('../src/Round');
 
 describe('Round', function() {
@@ -13,8 +12,6 @@ describe('Round', function() {
     const round = new Round(deck);
     expect(Round).to.be.a('function');
   });
-
-
 
   it('should be instantiated with a deck of cards', function() {
     const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
