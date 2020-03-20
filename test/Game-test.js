@@ -39,8 +39,10 @@ describe('Round', function() {
   });
 
   it('should calculate total time elapsed in minutes and seconds', function() {
+    const deck = new Deck()
+    const round = new Round(deck)
     const game = new Game();
     game.start();
-    expect(game.calculateTimeElapsed()).to.not.equal(null)
-  });
+    expect(round.calculateTimeElapsed()).to.not.equal(null)
+  })
 });
