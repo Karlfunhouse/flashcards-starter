@@ -30,5 +30,17 @@ describe('Round', function() {
     const game = new Game();
     game.start();
     expect(game.currentRound).to.be.an.instanceOf(Round);
-  })
+  });
+
+  it('should set the new start time at the beginning of a Game', function() {
+    const game = new Game();
+    game.start();
+    expect(game.startTime).to.not.equal(null)
+  });
+
+  it('should calculate total time elapsed in minutes and seconds', function() {
+    const game = new Game();
+    game.start();
+    expect(game.calculateTimeElapsed()).to.not.equal(null)
+  });
 });
